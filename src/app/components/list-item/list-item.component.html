@@ -1,7 +1,13 @@
 <div class="list" [ngClass]="{'list-track': item.comprado}">
     <h3>
         <div>
-            <fa-icon [icon] = "faCheckCircle" [ngStyle]="{'color':'green'}" (click)="onDone(item)"></fa-icon>
+            @if (!checkedItem) {
+                <fa-icon [icon] = "faSquare" [ngStyle]="{'color':'rgb(94, 93, 121)'}" (click)="onDone(item, true)"></fa-icon>
+            }
+            @else {
+                <fa-icon [icon] = "faCheckSquare" [ngStyle]="{'color':'green'}" (click)="onDone(item, false)"></fa-icon>
+            }
+            
             {{item.nome}}
         </div>
         

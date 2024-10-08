@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Item } from '../../../item';
-import { faTimes, faCheckSquare, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import { faSquare } from '@fortawesome/free-regular-svg-icons'
 
 @Component({
   selector: 'app-list-item',
@@ -18,13 +19,19 @@ export class ListItemComponent {
 
   faTimes = faTimes;
   faCheckSquare = faCheckSquare;
-  faCheckCircle = faCheckCircle;
+  faSquare = faSquare;
+  checkedItem: boolean = false;
 
   onDelete(item: Item){
     this.onDeleteItem.emit(item);
   }
 
-  onDone(item: Item){
+  onDone(item: Item, valor:boolean){
     this.onDoneComprado.emit(item);
+    this.checkedItem = valor;
+  }
+
+  checkItem(valor:boolean){
+    this.checkedItem = valor;
   }
 }
