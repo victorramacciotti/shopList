@@ -1,0 +1,5 @@
+
+<app-list-item *ngFor="let item of itens" [item]="item" 
+(onDeleteItem)="deleteItem($event)"
+(onDoneComprado)="checkItem($event)">
+</app-list-item>
