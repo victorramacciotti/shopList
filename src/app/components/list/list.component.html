@@ -1,4 +1,4 @@
-
+<app-add-item (onAddItem)="addItem($event)"></app-add-item>
 <app-list-item *ngFor="let item of itens" [item]="item" 
 (onDeleteItem)="deleteItem($event)"
 (onDoneComprado)="checkItem($event)">

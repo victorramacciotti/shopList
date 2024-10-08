@@ -21,4 +21,8 @@ export class ListService {
   updateItem(item:Item) : Observable<Item>{
     return this.http.put<Item>(`${this.apiURL}/${item.id}`, item)
   }
+
+  addItem(item: Item) : Observable<Item>{
+    return this.http.post<Item>(`${this.apiURL}`, item)
+  }
 }
