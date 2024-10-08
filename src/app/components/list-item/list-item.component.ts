@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Item } from '../../../item';
-import { faTimes, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { faSquare } from '@fortawesome/free-regular-svg-icons'
@@ -17,10 +17,11 @@ export class ListItemComponent {
   @Output () onDeleteItem = new EventEmitter<Item>();
   @Output () onDoneComprado = new EventEmitter<Item>();
 
-  faTimes = faTimes;
+  faTrashCan = faTrashCan;
   faCheckSquare = faCheckSquare;
   faSquare = faSquare;
   checkedItem: boolean = false;
+  
 
   onDelete(item: Item){
     this.onDeleteItem.emit(item);
