@@ -1,15 +1,14 @@
 {
-    "list":[
-        {
-            "id": 1,
-            "nome": "xampu",
-            "comprado": false
-        },
-
-        {
-            "id": 2,
-            "nome": "chocolate",
-            "comprado": false
-        }
-    ]
+  "list": [
+    {
+      "id": "1",
+      "nome": "xampu",
+      "comprado": false
+    },
+    {
+      "id": "2",
+      "nome": "chocolate",
+      "comprado": false
+    }
+  ]
 }
