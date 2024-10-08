@@ -1,8 +1,8 @@
 @if (mostraAddItem) {
-    <button>Fechar</button>
+    <app-button text="Fechar" color="red" (btnClick)="changeVisibility(false)"></app-button>
 }
 @else {
-    <button>Abrir</button>
+    <app-button text="Adicionar Item" color="green" (btnClick)="changeVisibility(true)"></app-button>
 }
 
 <form (ngSubmit)="onSubmit()" *ngIf="mostraAddItem" class="add-form">
