@@ -1,0 +1,14 @@
+@if (mostraAddItem) {
+    <button>Fechar</button>
+}
+@else {
+    <button>Abrir</button>
+}
+
+<form (ngSubmit)="onSubmit()" *ngIf="mostraAddItem" class="add-form">
+    <div>
+        <label for="text">Item:</label>
+        <input type="text" name="text" class="form-control" placeholder="Adicionar Item" [(ngModel)]="nome">
+    </div>
+    <input type="submit" value="Salvar Item" class="btn btn-block mb-4">
+</form>
