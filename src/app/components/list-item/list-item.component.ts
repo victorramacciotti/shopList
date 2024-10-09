@@ -32,7 +32,4 @@ export class ListItemComponent {
     this.checkedItem = valor;
   }
 
-  checkItem(valor:boolean){
-    this.checkedItem = valor;
-  }
 }
